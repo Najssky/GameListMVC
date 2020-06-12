@@ -1,0 +1,52 @@
+﻿@model GameListMVC.Models.Contact
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Free Contact Form :: W3layouts</title>
+    <link rel="stylesheet" href="~/assets/css/ContactStyle.css">
+    <link rel="stylesheet" href="~/assets/css/font-awesome.css">
+</head>
+
+<body>
+    @Html.Raw(TempData["msg"]);
+    <section class="w3l-contact-2">
+        <div class="contact-infubd section-gap">
+            <div class="wrapper">
+                <div class="contact-grids d-grid">
+                    <div class="contact-left">
+                        <h3>Kontakt</h3>
+                        <span class="fa fa-envelope-open-o" aria-hidden="true"></span>
+                        <h4>Zostaw nam wiadomość</h4>
+                    </div>
+                    <div class="contact-right">
+                        <form asp-action="Mail" method="post" class="signin-form">
+                            <div class="input-grids">
+                                <input asp-for="ContactName" placeholder="Imie*" class="contact-input" />
+                                <input asp-for="ContactLastName" placeholder="Nazwisko*" class="contact-input" />
+                                <input asp-for="ContactEmail" placeholder="Email*" class="contact-input"
+                                       required="" />
+                                <input asp-for="ContactSubject" placeholder="Temat*" class="contact-input" />
+                            </div>
+                            <div class="form-input">
+                                <textarea asp-for="ContactMessage" placeholder="Napisz swoją wiadomość*"
+                                          required=""></textarea>
+                            </div>
+                            <button class="btn submit">Wyślij</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

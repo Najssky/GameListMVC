@@ -1,0 +1,54 @@
+﻿@model GameListMVC.Models.Contact
+
+@{
+    ViewData["Title"] = "Create";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+</head>
+
+<body>
+    <!-- contact-form 2 -->
+    <section class="w3l-contact-2">
+        <div class="contact-infubd section-gap">
+            <div class="wrapper">
+                <div class="contact-grids d-grid">
+                    <div class="contact-left">
+                        <h3>Kontakt</h3>
+                        <span class="fa fa-envelope-open-o" aria-hidden="true"></span>
+                        <h4>Zostaw nam wiadomość</h4>
+                    </div>
+                    <div class="contact-right">
+                        <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="signin-form">
+                            <div class="input-grids">
+                                <input type="text" name="w3lName" id="w3lName" placeholder="Imie*" class="contact-input" />
+                                <input type="text" name="w3lName" id="w3lName" placeholder="Nazwisko*" class="contact-input" />
+                                <input type="email" name="w3lSender" id="w3lSender" placeholder="Email*" class="contact-input"
+                                       required="" />
+                            </div>
+                            <div class="form-input">
+                                <textarea name="w3lMessage" id="w3lMessage" placeholder="Napisz swoją wiadomość*"
+                                          required=""></textarea>
+                            </div>
+                            <button class="btn submit">Wyślij</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /contact-form-2 -->
+</body>
+
+</html>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

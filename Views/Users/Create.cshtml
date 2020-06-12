@@ -1,0 +1,53 @@
+﻿@model GameListMVC.Models.User
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<html lang="pl">
+<head>
+    <title>Basic Login Form A Flat Responsive Widget Template  :: w3layouts</title>
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="~/assets/css/UserStyle.css" rel='stylesheet' type='text/css' /><!-- style.css -->
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Basic Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+    <script src="~/js/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Panel rejestracji</h1>
+    <div class="main-agile">
+        <div class="alert-close"> </div>
+        <div class="content-wthree">
+            <div class="circle-w3layouts"></div>
+            <form method="post">
+                <div class="inputs-w3ls">
+                    <input asp-for="Login" placeholder="Login" />
+                    <span asp-validation-for="Login" class="text-danger"></span>
+                </div>
+                <div class="inputs-w3ls">
+                    <input asp-for="Password" type="password" placeholder="Hasło" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="inputs-w3ls">
+                    <input asp-for="Name" placeholder="Imię" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="inputs-w3ls">
+                    <input asp-for="Lastname" placeholder="Nazwisko" />
+                    <span asp-validation-for="Lastname" class="text-danger"></span>
+                </div>
+                <div class="inputs-w3ls">
+                    <input asp-for="Email" placeholder="Email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="inputs-w3ls">
+                    <button class="btn btn-info btn-lg">Dodaj użytkownika</button><br /><br />
+                    <a class="btn btn-info btn-lg" asp-action="Login">Wróć do panelu logowania</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
